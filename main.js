@@ -173,6 +173,7 @@ function move() {
             ball.dx = -ball.dx + 0.5;
         } else {
             pcscore++;
+            missed.play();
             reset();
             navigator.vibrate(100);
         }
@@ -185,7 +186,7 @@ function move() {
         stroke("white");
         textSize(25)
         text("Game Over!☹☹", width / 2, height / 2);
-        text("Reload The Page!", width / 2, height / 2 + 30)
+        text("Press Restart Button To Play Again!", width / 2, height / 2 + 30)
         noLoop();
         pcscore = 0;
     }
